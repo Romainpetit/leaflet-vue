@@ -1,11 +1,13 @@
 import Vue from "vue";
 import App from "./App.vue";
+// Import the Icon
 import { Icon } from "leaflet";
+// Import the whole Leaflet CSS
 import "leaflet/dist/leaflet.css";
 
 Vue.config.productionTip = false;
 
-// this part resolve an issue where the markers would not appear
+// Resolve an issue where the markers would not appear
 delete Icon.Default.prototype._getIconUrl;
 
 Icon.Default.mergeOptions({
