@@ -25,7 +25,7 @@ yarn run serve
 - Call the components with `LMap` as parent in the template
 
 ## Vue2Leaflet Documentation
-[Official quick start guide](hhttps://vue2-leaflet.netlify.app/quickstart/)
+[Official quick start guide](https://vue2-leaflet.netlify.app/quickstart/)
 
 ## Vue2Leaflet Examples
 [Official examples demo, with code](https://vue2-leaflet.netlify.app/examples/)
