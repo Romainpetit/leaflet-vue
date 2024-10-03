@@ -1,0 +1,27 @@
+{
+    "name": "Leaflet-vue",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.shell.linux": "/bin/bash"
+            },
+            "extensions": [
+                "dbaeumer.vscode-eslint",
+                "octref.vetur",
+                "Vue.volar"
+            ]
+        }
+    },
+    "forwardPorts": [
+        3000
+    ],
+    "postCreateCommand": "if [ ! -f package.json ]; then npm create vue@latest .; fi && git config --global --add safe.directory /workspaces/suppliers",
+    "remoteUser": "node",
+    "mounts": [
+        "source=${env:HOME}/.ssh,target=/home/node/.ssh,type=bind,consistency=cached"
+    ]
+}
